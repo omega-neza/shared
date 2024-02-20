@@ -7,10 +7,12 @@ import 'sign_up.dart';
 import 'screen.dart'; 
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<MyApp> createState() => _MyAppState();
 }
@@ -22,8 +24,8 @@ class _MyAppState extends State<MyApp> {
 
   final List<Widget> _widgetOptions = <Widget>[
     Container(
-      color: Color.fromARGB(255, 7, 160, 255),
-      child: Center(
+      color: const Color.fromARGB(255, 7, 160, 255),
+      child: const Center(
         child: Text(
           "Gallery",
           style: optionStyle,
@@ -31,17 +33,17 @@ class _MyAppState extends State<MyApp> {
       ),
     ),
     Container(
-      color: Color.fromARGB(255, 135, 140, 210),
-      child: Center(
+      color: const Color.fromARGB(255, 135, 140, 210),
+      child: const Center(
         child: Text(
           "explore",
           style: optionStyle,
         ),
       ),
     ),
-    Screen(), 
-    SignUpScreen(),
-    LoginScreen(),
+    const Screen(), 
+    const SignUpScreen(),
+    const LoginScreen(),
   ];
 
   
@@ -72,12 +74,12 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false, 
       theme: _currentTheme,
       home: Scaffold(
-        drawer: NavBar(),
+        drawer: const NavBar(),
         appBar: AppBar(
-          title: Text("Navigation Bar"),
+          title: const Text("Navigation Bar"),
           actions: [
             IconButton(
-              icon: Icon(Icons.lightbulb),
+              icon: const Icon(Icons.lightbulb),
               onPressed: _toggleTheme,
             ),
           ],
@@ -97,17 +99,17 @@ class _MyAppState extends State<MyApp> {
           ),
           child: SafeArea(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
               child: GNav(
                 rippleColor: Colors.grey[300]!,
                 hoverColor: Colors.grey[300]!,
                 gap: 7,
                 activeColor: Colors.blueAccent,
                 iconSize: 24,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 tabBackgroundColor: Colors.grey[100]!,
                 color: Colors.black,
-                tabs: [
+                tabs: const [
                   GButton(
                     icon: LineIcons.enviraGallery,
                     text: "gallery",
